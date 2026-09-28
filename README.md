@@ -28,6 +28,8 @@
 ```
 ai-agent/
 ├── README.md      # 本文件：规则 + 使用说明。改了结构就同步改这里
+├── tech-stack.md  # 要学的技术验收表：分组清单，每项都有「能用」的具体动作（A–I 九组）
+├── software.md    # 要装的软件/工具：安装命令 + 本机实测状态 + 端点复用（缓存全在 D 盘）
 ├── progress.md    # 打卡表：16 章 / 14 篇 Extra / 共创项目的学习状态
 ├── notes/         # 每天一份 YYYY-MM-DD.md；_模板.md 是复制源
 │   └── _模板.md
@@ -37,6 +39,8 @@ ai-agent/
 
 | 要做什么 | 具体动作 |
 |---|---|
+| 想知道**要学什么、学到什么程度** | 打开 `tech-stack.md`（技术验收表：A–I 九组 + 学习顺序总表） |
+| 想知道**要装什么、怎么接模型端点** | 打开 `software.md`（软件清单：安装命令 + 本机实测状态 + 端点复用，缓存全在 D 盘） |
 | 记今天的笔记 | `cp notes/_模板.md notes/$(date +%F).md` 然后填 |
 | 查教材里某个概念 | `rg -n "关键词" /d/code/hello-agents/docs/chapter*/`（全 16 章中文正文离线检索） |
 | 读某一章 | 打开 `D:\code\hello-agents\docs\chapterN\第X章 xxx.md`（图能正常显示） |
