@@ -1,7 +1,7 @@
 # AI Agent 开发 · 软件/工具清单（software.md）
 
 > 建立：2026-09-28　「现状」列 = **本机 2026-09-28 实测**（有版本号才算已装）。
-> 配套：要学什么看 `tech-stack.md`；要不要装判断标准与 ai_pm 一致：**当前阶段用得上才装**。
+> 配套：要学什么看 `tech-stack.md`；判断标准就一条：**当前阶段用得上才装**。
 
 ## 0. 使用规则（先读，违反任何一条都会踩坑）
 
@@ -37,7 +37,7 @@
 | python 包（openai/mcp/fastapi/pydantic…） | — | Hermes venv 自带 | ⚠️ 不可用（规则3：不往里装） |
 
 **尚缺的 Python 包**（都未装，按阶段补）：`langgraph`、`langchain`、`llama-index`、`chromadb`、`ragas`、`langfuse`、`deepeval`、`browser-use`、`playwright`、`markitdown`、`litellm`。
-L1 项目 venv 里已有的经验包（可复用参考）：`streamlit`、`trafilatura`、`pymupdf`、`pytest`、`pandas`、`httpx`——**不要在系统里重复装，需要时在 lab venv 里按需装**。
+本机其他项目 venv 里已有的经验包（可参考，**不要在系统里重复装**，需要时在 lab venv 里按需装）：`streamlit`、`trafilatura`、`pymupdf`、`pytest`、`pandas`、`httpx`。
 
 ## 2. 模型端点怎么接（复用 Hermes 已配好的，不新建账号）
 
@@ -58,11 +58,11 @@ LLM_API_KEY=${HERMES_CUSTOM_STEPFUN_API_KEY}   # 或直接 export 后再跑，�
 LLM_TIMEOUT=60
 ```
 
-> 坑：推理模型（deepseek-flash 等）会先消耗推理 token，`max_tokens` 给 4096 可能截断出半句 JSON——L1 已实测，模板里给足（≥8192 或显式截断信号）。
+> 坑：推理模型（deepseek-flash 等）会先消耗推理 token，`max_tokens` 给 4096 可能截断出半句 JSON——已实测（见 `labs/ch04-llm-client/` + `notes/2026-09-29.md`），模板里给足（≥8192 或显式截断信号）。
 
 ## 3. 分组清单
 
-### A. 阶段0 · 现在就接（本周 W1–W2）
+### A. 阶段1 · 现在就接（地基与范式期）
 
 | 工具 | 干什么用 | 装到哪 | 怎么装 | 什么时候装 | 替代品/坑 |
 |---|---|---|---|---|---|
@@ -70,22 +70,22 @@ LLM_TIMEOUT=60
 | openai + python-dotenv + pydantic | 教程代码的调用/配置/校验 | lab venv | `uv pip install --python .venv/Scripts/python.exe openai python-dotenv pydantic` | 本周 | — |
 | jq（可选） | 终端 JSON 处理 | `D:\code\environment\bin` | 官网二进制放 bin | 本周 | 不装也能用 python -m json.tool |
 
-### B. 阶段1 · L2 检索增强期（W5–W8 前装）
+### B. 阶段3 · 检索增强期前装
 
 | 工具 | 干什么用 | 怎么装 | 坑 |
 |---|---|---|---|
-| chromadb | 本地向量库（入门用，零配置） | `uv pip install chromadb`（lab venv） | 先装这个，pgvector 等 L4 |
+| chromadb | 本地向量库（入门用，零配置） | `uv pip install chromadb`（lab venv） | 先装这个，pgvector 等交付阶段再说 |
 | llama-index（或 langchain 二选一） | RAG 框架 | `uv pip install llama-index` | 二选一即可，都装会乱 |
 | markitdown | Office/PDF→Markdown 解析 | `uv pip install markitdown` | 与 trafilatura 互补 |
 | ragas | RAG 评测（召回/忠实度） | `uv pip install ragas` | 依赖较多，装进独立 venv |
 | langfuse（云端版） | 调用追踪/成本面板 | 网页注册 + `uv pip install langfuse` | 免费额度够学习 |
-| promptfoo（可选） | 提示词 A/B | `npx promptfoo@latest`（Node 已就位） | 与 ai_pm 工具栈复用 |
+| promptfoo（可选） | 提示词 A/B | `npx promptfoo@latest`（Node 已就位） | 有评测集之后顺手做 |
 
-### C. 阶段2 · L3 Agent 编排期（W9 前装）
+### C. 阶段4 · 编排与协议期前装
 
 | 工具 | 干什么用 | 怎么装 | 坑 |
 |---|---|---|---|
-| langgraph | 状态图编排（L3 主框架） | `uv pip install langgraph` | 需 Python 3.9+，OK |
+| langgraph | 状态图编排（编排阶段主框架） | `uv pip install langgraph` | 需 Python 3.9+，OK |
 | hello-agents 框架 | 母本自研框架，穿透表象 | `uv pip install hello-agents` | 见第7章；与 langgraph 可并存 |
 | browser-use + playwright | 浏览器 Agent | `uv pip install browser-use playwright` + `playwright install chromium` | 首次下载浏览器较大，缓存别落 C 盘 |
 | Firecrawl（可选） | 网页抓取 API | 网页注册 + SDK | 先用免费额度；本地抓取已有 trafilatura 兜底 |
@@ -99,15 +99,15 @@ LLM_TIMEOUT=60
 | Dify | 自托管工作流+RAG | Docker Compose 一键 | **需先修 Docker（F1）**；嫌麻烦用官网云版 |
 | n8n | 自动化工作流 | `npx n8n` 或 `npm i -g n8n` | Node 已就位 |
 
-### E. 部署与观测（阶段3 / L4 前）
+### E. 部署与观测（阶段5 前）
 
 | 工具 | 干什么用 | 怎么装 | 坑 |
 |---|---|---|---|
 | **Docker Desktop 修复** | 容器化一切的先决条件 | 现状：CLI 29.7.2 已装，但 **daemon 没起 + compose 插件缺失**（`docker info` 连不上 `dockerDesktopLinuxEngine`）。需启动 Docker Desktop，必要时补装 compose 插件 | 本机是标准用户，Docker Desktop 若装失败只能引导手动装；Dify 等 docker 系工具都卡在这 |
-| GitHub Actions | CI 自动测试 | 仓库已会配 | 与 ai_pm 三平台联动 |
-| Vercel / Railway（可选） | 部署 FastAPI/前端 | 注册 + CLI | L4 再说 |
+| GitHub Actions | CI 自动测试 | 仓库已会配 | 给本目录的 lab 用 |
+| Vercel / Railway（可选） | 部署 FastAPI/前端 | 注册 + CLI | 交付阶段再说 |
 
-### F. 安全（阶段1 前）
+### F. 安全（阶段5 前）
 
 | 工具 | 干什么用 | 怎么装 |
 |---|---|---|
@@ -120,15 +120,15 @@ LLM_TIMEOUT=60
 | 软件 | 为什么不装 |
 |---|---|
 | AnythingLLM / Open WebUI / LM Studio / Jan | PM「体验完整 RAG 产品」用，**不是 Agent 开发工具**；要体验时用 Dify 云版代替 |
-| Ollama | 无网/隐私回退才需要；当前所有端点可用，阶段0 不装（G 组技术标「可选」） |
-| RAGFlow / Langchain-Chatchat | Docker 未修好前装了也跑不起来；且 L2 首选 chromadb+llama-index，够用 |
+| Ollama | 无网/隐私回退才需要；当前所有端点可用，阶段1 不装（G 组技术标「可选」） |
+| RAGFlow / Langchain-Chatchat | Docker 未修好前装了也跑不起来；且检索阶段首选 chromadb+llama-index，够用 |
 | vLLM / SGLang / Kubernetes / GPUStack | 本机无 GPU 集群，是实习/生产向，研一下再说 |
-| Metabase / Grafana | 数据看板是 L4 包装期的事，装早了吃灰 |
+| Metabase / Grafana | 数据看板是交付阶段的事，装早了吃灰 |
 | Docker Compose 全家 | 见 E1：Docker daemon 修复前，所有 docker 系（Dify/n8n 自托管/RAGFlow）都延迟 |
 
 ## 4. 维护规则
 
 - 每次新装工具：更新本表「现状」列 + 在当天 `notes/` 里记一条真实使用记录；
-- 装之前对照 ai_pm 的《工具栈与信息源》和 `soft/` 清单，**能复用就不重装**；
+- 装之前先想清楚「这个阶段的实验用得上吗」，**能复用已有的就不重装**；
 - 「先不装」条目每季度复核一次，条件变了就上移；
 - 本机实测状态以本表为准，怀疑失效就重新跑版本命令，不凭记忆。
