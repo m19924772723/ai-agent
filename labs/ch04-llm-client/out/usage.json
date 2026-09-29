@@ -1,0 +1,47 @@
+{
+  "ts": "2026-09-29T13:35:16",
+  "records": [
+    {
+      "ts": "2026-09-29T13:35:13",
+      "preset": "stepfun",
+      "model": "step-3.7-flash",
+      "base_url": "https://api.stepfun.com/v1",
+      "prompt": "用一句话解释什么是 LLM 的流式输出。",
+      "output": "LLM流式输出是指模型生成内容时，无需等全部内容生成完毕，而是边生成边逐段（逐token）推送结果给用户，可降低等待感知、提升交互体验。",
+      "ttft_s": 5.387,
+      "total_s": 5.454,
+      "chars": 68,
+      "delta_count": 11,
+      "max_gap_s": 0.058,
+      "median_gap_s": 0.0,
+      "reasoning_streamed": true,
+      "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 280,
+        "total_tokens": 323
+      },
+      "finish_reason": null
+    },
+    {
+      "ts": "2026-09-29T13:35:16",
+      "preset": "deepseek",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com/v1",
+      "prompt": "用一句话解释什么是 LLM 的流式输出。",
+      "output": "流式输出指 LLM 不等待全部内容生成完，而是边生成边逐字逐句实时返回，让用户更快看到结果。",
+      "ttft_s": 2.804,
+      "total_s": 2.911,
+      "chars": 46,
+      "delta_count": 31,
+      "max_gap_s": 0.072,
+      "median_gap_s": 0.0,
+      "reasoning_streamed": true,
+      "usage": {
+        "prompt_tokens": 56,
+        "completion_tokens": 97,
+        "total_tokens": 153
+      },
+      "finish_reason": null
+    }
+  ]
+}

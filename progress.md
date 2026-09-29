@@ -13,7 +13,7 @@
 | 1 初识智能体 | 智能体定义、工作流 vs Agent 的边界 | 背景，随时 | 未开始 | — |
 | 2 智能体发展史 | ELIZA 到现代 Agent | 通勤扫读 | 未开始 | — |
 | 3 大语言模型基础 | BPE / 词向量 / Transformer / 采样 | 调参困惑时回查 | 未开始 | — |
-| **4 经典范式构建** | ReAct / Reflection / Plan-and-Solve | **做 L3 前** | 未开始 | — |
+| **4 经典范式构建** | ReAct / Reflection / Plan-and-Solve | **做 L3 前** | 在读（4.1 客户端已跑通） | [2026-09-29](../notes/2026-09-29.md) |
 | 5 低代码平台搭建 | Coze / Dify / FastGPT / n8n | 要快速出原型时 | 未开始 | — |
 | 6 框架开发实践 | AgentScope / AutoGen / CAMEL / LangGraph | 选型时对照读 | 未开始 | — |
 | **7 构建你的 Agent 框架** | 自己实现 Agent 循环 / 工具 / 记忆 | **做 L3 前** | 未开始 | — |
@@ -51,7 +51,7 @@
 
 | 实验目录 | 对应章节 | 做了什么改造 | 状态 | 笔记 |
 |---|---|---|---|---|
-| （还没有） | — | — | — | — |
+| `labs/ch04-llm-client/` | 第 4 章 4.1 | 母本 `llm_client.py` 复刻 + 逐 chunk 时间线 / usage / 吞吐采集，支持 stepfun 与 deepseek 两家 preset | 已跑通（两家端点，U1） | [2026-09-29](../notes/2026-09-29.md) |
 
 ## 四、共创项目（55 个，按需查不打卡）
 

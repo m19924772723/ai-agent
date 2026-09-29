@@ -6,7 +6,7 @@
 ## 0. 使用规则（先读，违反任何一条都会踩坑）
 
 1. **一切装到 D 盘**：工具链在 `D:\code\environment\`，项目依赖在项目自己的 `.venv\`；C 盘只留系统必需。
-2. **缓存永远指向 `D:\code\environment\cache\`**：pip/npm/pnpm/uv 已全局配好（`PIP_CACHE_DIR`/`NPM_CONFIG_CACHE`/`UV_CACHE_DIR`）。新装任何工具先确认它的缓存目录不在 C 盘。
+2. **缓存永远指向 `D:\code\environment\cache\`**：pip/npm/pnpm/uv 已全局配好（`PIP_CACHE_DIR`/`NPM_CONFIG_CACHE`/`UV_CACHE_DIR`）；**uv 管理的 Python 解释器也已改到 D 盘**（`UV_PYTHON_INSTALL_DIR=D:\code\environment\uv\python`，2026-09-29 设置，默认本来在 `C:\Users\1\AppData\Roaming\uv`）。新装任何工具先确认它的缓存目录不在 C 盘。
 3. **不要往 Hermes 的 python 里装包**：`python` 指向 `D:\code\hermes\hermes-agent\venv\Scripts\python.exe`（3.11.16），那是 Hermes 运行环境，装包会污染它。**每个实验用 `uv venv` 建独立环境**：
    ```bash
    cd D:/code/hermes/ai-agent/labs/<实验名>
