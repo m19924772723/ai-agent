@@ -49,7 +49,7 @@ Hermes 的 provider 配置（`D:\code\hermes\config.yaml`）已把密钥注入�
 | deepseek 官方 | `https://api.deepseek.com/v1` | `deepseek-flash` | ✅ chat_completions | `HERMES_CUSTOM_DEEPSEEK_API_KEY` |
 | 中转 xxyapi/tuoji/siyu 系 | 各自域名 | 各模型 | ❌ anthropic_messages 协议，教程代码用不了 | 先不用 |
 
-在 `labs/<实验名>/.env` 里写（hello-agents 统一格式，见 `D:\code\hello-agents\code\chapter4\.env.example`）：
+在 `labs/<实验名>/.env` 里写（hello-agents 统一格式，见 `D:\code\hermes\ai-agent\references\hello-agents\code\chapter4\.env.example`）：
 
 ```bash
 LLM_MODEL_ID=step-3.7-flash

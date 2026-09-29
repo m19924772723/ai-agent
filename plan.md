@@ -1,6 +1,6 @@
 # AI Agent 每日学习与实践计划（plan.md）
 
-> 依据：本地母本 `D:\code\hello-agents`（Datawhale《从零开始构建智能体》：16 章正文 + 每章可运行代码 + 14 篇 Extra）
+> 依据：本地母本 `D:\code\hermes\ai-agent\references\hello-agents`（Datawhale《从零开始构建智能体》：16 章正文 + 每章可运行代码 + 14 篇 Extra）
 > 编号：**本文档自有单元编号 U1、U2…**（U1 = 2026-09-29），不沿用任何其他目录的编号
 > 节奏：一天一个单元（45–90 分钟），逐日表只保留**未来 2 周**，后面阶段按周给主题
 > 边界：本目录自成一个学习线，**不与其他工作区交叉链接**；一切产出（笔记 / 实验 / 成果）都写在 `D:\code\hermes\ai-agent` 内
@@ -88,7 +88,7 @@
 ## 7. 每天固定动作（贴在 `notes/` 里就够）
 
 ```text
-① 10 min  定向读：rg -n "关键词" /d/code/hello-agents/docs/chapter*/   → 只看今天要用的那一段
+① 10 min  定向读：rg -n "关键词" /d/code/hermes/ai-agent/references/hello-agents/docs/chapter*/   → 只看今天要用的那一段
 ② 25-35 min 动手：在 labs/<实验名>/ 里跑，改，再跑；粘贴真实输出
 ③ 10 min  写笔记：notes/YYYY-MM-DD.md 四块（概念/输出/面试话术/落点）
 ④ 5 min   打卡：progress.md 打勾 · tech-stack.md 台账加一行 · 有成品 → results/
@@ -109,8 +109,8 @@
 ## 9. 维护规则
 
 - 逐日表只保留**未来 2 周**，过期单元改成 `✅ 完成 / ⏭ 跳过` 并留一行结果（链接到 notes）；
-- 章节内容、代码清单变化时，以母本 `D:\code\hello-agents` 实际文件为准再改本文件；
+- 章节内容、代码清单变化时，以母本 `D:\code\hermes\ai-agent\references\hello-agents` 实际文件为准再改本文件；
 - 本文件与 `progress.md`（章节打卡）、`tech-stack.md`（技术验收 + 台账）、`results/`（成果归档）四者联动，改一处要同步另三处；
-- 教材更新：`cd /d/code/hello-agents && git pull --depth 1 origin main` 后核对章节号是否变动。
+- 教材更新：`cd /d/code/hermes/ai-agent/references/hello-agents && git pull --depth 1 origin main` 后核对章节号是否变动。
 
 *建立 2026-09-29｜下次滚动更新：2026-10-06（阶段1 复盘时）*

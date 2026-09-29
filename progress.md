@@ -4,7 +4,7 @@
 > 状态只允许四种：`未开始` / `在读` / `已读` / `代码已跑通`（后两种必须能点开对应笔记，否则不算）。
 > 优先级只是「什么时候需要」的提示，**不代表必须按顺序读**——按项目需要跳。
 > **「今天做什么」看 `plan.md`（每日单元表）；「要学什么、学到什么程度」看 `tech-stack.md`（技术验收表）；「装什么、怎么接端点」看 `software.md`。本表只打卡章节。**
-> 章节清单以母本为准：`D:\code\hello-agents\docs\_sidebar.md`（本目录不另维护章节目录）。
+> 章节清单以母本为准：`D:\code\hermes\ai-agent\references\hello-agents\docs\_sidebar.md`（本目录不另维护章节目录）。
 
 ## 一、16 章正文
 
@@ -55,7 +55,7 @@
 
 ## 四、共创项目（55 个，按需查不打卡）
 
-位置：`D:\code\hello-agents\Co-creation-projects\`。挑同类看它的目录结构与提示词写法，
+位置：`D:\code\hermes\ai-agent\references\hello-agents\Co-creation-projects\`。挑同类看它的目录结构与提示词写法，
 看过并借鉴过的，在当天笔记里记一句「参照了 XX 项目的什么做法」即可。
 
 ---

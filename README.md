@@ -1,7 +1,7 @@
 # AI Agent 学习笔记（ai-agent）
 
 > 这条学习线的**全部内容都在这个目录里**：计划、笔记、实验代码、成果。
-> 建立：2026-09-29　主线教材：Datawhale《从零开始构建智能体》（本地母本 `D:\code\hello-agents`）
+> 建立：2026-09-29　主线教材：Datawhale《从零开始构建智能体》（本地母本 `D:\code\hermes\ai-agent\references\hello-agents`）
 
 ## 1. 这是什么
 
@@ -18,7 +18,7 @@
 | 位置 | 里面放什么 | 规矩 |
 |---|---|---|
 | `D:\code\hermes\ai-agent`（本目录） | **本条线的一切**：计划、笔记、实验、成果 | 学习相关的东西只写这里，不散落到别的工作区 |
-| `D:\code\hello-agents` | 教材母本（第三方仓库） | **只读**。要改代码先复制到本目录 `labs/` 再改，否则 `git pull` 会冲突 |
+| `D:\code\hermes\ai-agent\references\hello-agents` | 教材母本（第三方仓库） | **只读**。要改代码先复制到本目录 `labs/` 再改，否则 `git pull` 会冲突 |
 | `D:\code\environment` | 工具链、解释器、缓存（uv / node / Git / gh / cache…） | 环境类东西只装这里，**不装到 C 盘、也不装进本目录** |
 
 ## 3. 目录结构（每个文件怎么用）
@@ -42,10 +42,10 @@ ai-agent/
 | 想知道**要装什么、怎么接模型端点** | 打开 `software.md`（安装命令 + 实测状态 + 端点复用） |
 | 归档今天的**成果** | 建 `results/YYYY-MM-DD/<成果名>/` 写说明，台账加一行（规则见 `results/README.md`） |
 | 记今天的笔记 | `cp notes/_模板.md notes/$(date +%F).md` 然后填 |
-| 查教材里某个概念 | `rg -n "关键词" /d/code/hello-agents/docs/chapter*/`（全 16 章中文正文离线检索） |
-| 读某一章 | 打开 `D:\code\hello-agents\docs\chapterN\第X章 xxx.md`（图能正常显示） |
+| 查教材里某个概念 | `rg -n "关键词" /d/code/hermes/ai-agent/references/hello-agents/docs/chapter*/`（全 16 章中文正文离线检索） |
+| 读某一章 | 打开 `D:\code\hermes\ai-agent\references\hello-agents\docs\chapterN\第X章 xxx.md`（图能正常显示） |
 | 跑某一章的代码 | 复制到 `labs/` 下改名再跑，用实验自己的 `.venv` |
-| 更新教材 | `cd /d/code/hello-agents && git pull --depth 1 origin main` |
+| 更新教材 | `cd /d/code/hermes/ai-agent/references/hello-agents && git pull --depth 1 origin main` |
 
 ## 4. 每天怎么记（5 步，15–30 分钟）
 

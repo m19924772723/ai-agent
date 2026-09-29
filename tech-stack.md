@@ -2,7 +2,7 @@
 
 > 建立：2026-09-28｜**本目录自成一体的技术验收表**，不与外部工作区交叉链接。
 > 这是**验收表不是课程表**：每项的「会用」都定义成可勾选的具体动作，勾不掉 = 没学完。
-> 章节打卡见 `progress.md`；动手计划见 `plan.md`；工具见 `software.md`；章节正文在母本 `D:\code\hello-agents`（清单见其 `docs/_sidebar.md`）。
+> 章节打卡见 `progress.md`；动手计划见 `plan.md`；工具见 `software.md`；章节正文在母本 `D:\code\hermes\ai-agent\references\hello-agents`（清单见其 `docs/_sidebar.md`）。
 
 ## 0. 状态口径（只有这四种，不许发明新词）
 

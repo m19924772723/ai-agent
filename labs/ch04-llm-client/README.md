@@ -2,7 +2,7 @@
 
 ## 1. 出处
 
-- 母本：`D:\code\hello-agents\code\chapter4\llm_client.py`（`main@8c57a6c`）+ 同目录 `.env.example`
+- 母本：`D:\code\hermes\ai-agent\references\hello-agents\code\chapter4\llm_client.py`（`main@8c57a6c`）+ 同目录 `.env.example`
 - 第 4 章 4.1 节的 `HelloAgentsLLM.think()`：流式调用 OpenAI 兼容接口的最小实现
 
 ## 2. 改了什么 / 为什么
