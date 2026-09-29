@@ -1,0 +1,401 @@
+{
+  "ts": "2026-09-29T13:51:27",
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com/v1",
+  "samples": 12,
+  "passes": 2,
+  "workflow": {
+    "total_ms": 0.2,
+    "tokens": 0,
+    "avg_ms": 0.02
+  },
+  "agent": {
+    "json_ok": 24,
+    "json_ok_total": 24,
+    "total_tokens": 5809,
+    "avg_tokens": 242.0,
+    "total_s": 70.51,
+    "avg_s": 2.94,
+    "max_s": 17.98,
+    "self_consistent": 8
+  },
+  "cross_consistent_with_rules": 4,
+  "workflow_detail": [
+    {
+      "类型": "bug",
+      "严重度": "高",
+      "模块": "支付"
+    },
+    {
+      "类型": "需求",
+      "严重度": "低",
+      "模块": "搜索"
+    },
+    {
+      "类型": "体验",
+      "严重度": "低",
+      "模块": "登录"
+    },
+    {
+      "类型": "体验",
+      "严重度": "中",
+      "模块": "列表"
+    },
+    {
+      "类型": "需求",
+      "严重度": "低",
+      "模块": "其他"
+    },
+    {
+      "类型": "体验",
+      "严重度": "低",
+      "模块": "支付"
+    },
+    {
+      "类型": "bug",
+      "严重度": "低",
+      "模块": "搜索"
+    },
+    {
+      "类型": "需求",
+      "严重度": "低",
+      "模块": "登录"
+    },
+    {
+      "类型": "bug",
+      "严重度": "中",
+      "模块": "支付"
+    },
+    {
+      "类型": "体验",
+      "严重度": "低",
+      "模块": "支付"
+    },
+    {
+      "类型": "需求",
+      "严重度": "低",
+      "模块": "内容"
+    },
+    {
+      "类型": "bug",
+      "严重度": "中",
+      "模块": "列表"
+    }
+  ],
+  "agent_pass1": [
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "高",
+        "模块": "支付"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"高\", \"模块\": \"支付\"}",
+      "latency_s": 17.98,
+      "prompt_tokens": 104,
+      "completion_tokens": 51,
+      "total_tokens": 155
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "需求",
+        "严重度": "中",
+        "模块": "搜索"
+      },
+      "raw": "{\"类型\": \"需求\", \"严重度\": \"中\", \"模块\": \"搜索\"}",
+      "latency_s": 1.21,
+      "prompt_tokens": 105,
+      "completion_tokens": 97,
+      "total_tokens": 202
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "高",
+        "模块": "登录"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"高\", \"模块\": \"登录\"}",
+      "latency_s": 1.582,
+      "prompt_tokens": 101,
+      "completion_tokens": 79,
+      "total_tokens": 180
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "体验",
+        "严重度": "中",
+        "模块": "列表"
+      },
+      "raw": "{\"类型\": \"体验\", \"严重度\": \"中\", \"模块\": \"列表\"}",
+      "latency_s": 1.393,
+      "prompt_tokens": 102,
+      "completion_tokens": 20,
+      "total_tokens": 122
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "需求",
+        "严重度": "低",
+        "模块": "其他"
+      },
+      "raw": "{\"类型\": \"需求\", \"严重度\": \"低\", \"模块\": \"其他\"}",
+      "latency_s": 2.685,
+      "prompt_tokens": 106,
+      "completion_tokens": 234,
+      "total_tokens": 340
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "中",
+        "模块": "支付"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"支付\"}",
+      "latency_s": 2.348,
+      "prompt_tokens": 101,
+      "completion_tokens": 238,
+      "total_tokens": 339
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "体验",
+        "严重度": "中",
+        "模块": "搜索"
+      },
+      "raw": "{\"类型\": \"体验\", \"严重度\": \"中\", \"模块\": \"搜索\"}",
+      "latency_s": 2.242,
+      "prompt_tokens": 103,
+      "completion_tokens": 235,
+      "total_tokens": 338
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "需求",
+        "严重度": "中",
+        "模块": "登录"
+      },
+      "raw": "{\"类型\": \"需求\", \"严重度\": \"中\", \"模块\": \"登录\"}",
+      "latency_s": 1.357,
+      "prompt_tokens": 107,
+      "completion_tokens": 106,
+      "total_tokens": 213
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "中",
+        "模块": "列表"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"列表\"}",
+      "latency_s": 1.636,
+      "prompt_tokens": 103,
+      "completion_tokens": 187,
+      "total_tokens": 290
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "高",
+        "模块": "支付"
+      },
+      "raw": "{\"类型\":\"bug\",\"严重度\":\"高\",\"模块\":\"支付\"}",
+      "latency_s": 4.695,
+      "prompt_tokens": 101,
+      "completion_tokens": 223,
+      "total_tokens": 324
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "需求",
+        "严重度": "中",
+        "模块": "其他"
+      },
+      "raw": "{\"类型\":\"需求\",\"严重度\":\"中\",\"模块\":\"其他\"}",
+      "latency_s": 2.441,
+      "prompt_tokens": 101,
+      "completion_tokens": 202,
+      "total_tokens": 303
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "中",
+        "模块": "列表"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"列表\"}",
+      "latency_s": 2.838,
+      "prompt_tokens": 101,
+      "completion_tokens": 124,
+      "total_tokens": 225
+    }
+  ],
+  "agent_pass2": [
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "高",
+        "模块": "支付"
+      },
+      "raw": "{\"类型\":\"bug\",\"严重度\":\"高\",\"模块\":\"支付\"}",
+      "latency_s": 3.487,
+      "prompt_tokens": 104,
+      "completion_tokens": 60,
+      "total_tokens": 164
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "需求",
+        "严重度": "中",
+        "模块": "搜索"
+      },
+      "raw": "{\"类型\": \"需求\", \"严重度\": \"中\", \"模块\": \"搜索\"}",
+      "latency_s": 2.432,
+      "prompt_tokens": 105,
+      "completion_tokens": 123,
+      "total_tokens": 228
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "高",
+        "模块": "登录"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"高\", \"模块\": \"登录\"}",
+      "latency_s": 1.303,
+      "prompt_tokens": 101,
+      "completion_tokens": 55,
+      "total_tokens": 156
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "中",
+        "模块": "列表"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"列表\"}",
+      "latency_s": 2.375,
+      "prompt_tokens": 102,
+      "completion_tokens": 228,
+      "total_tokens": 330
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "需求",
+        "严重度": "低",
+        "模块": "列表"
+      },
+      "raw": "{\"类型\": \"需求\", \"严重度\": \"低\", \"模块\": \"列表\"}",
+      "latency_s": 2.69,
+      "prompt_tokens": 106,
+      "completion_tokens": 153,
+      "total_tokens": 259
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "中",
+        "模块": "支付"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"支付\"}",
+      "latency_s": 1.092,
+      "prompt_tokens": 101,
+      "completion_tokens": 20,
+      "total_tokens": 121
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "体验",
+        "严重度": "中",
+        "模块": "搜索"
+      },
+      "raw": "{\"类型\": \"体验\", \"严重度\": \"中\", \"模块\": \"搜索\"}",
+      "latency_s": 1.513,
+      "prompt_tokens": 103,
+      "completion_tokens": 131,
+      "total_tokens": 234
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "需求",
+        "严重度": "中",
+        "模块": "登录"
+      },
+      "raw": "{\"类型\": \"需求\", \"严重度\": \"中\", \"模块\": \"登录\"}",
+      "latency_s": 4.182,
+      "prompt_tokens": 107,
+      "completion_tokens": 155,
+      "total_tokens": 262
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "中",
+        "模块": "列表"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"列表\"}",
+      "latency_s": 1.45,
+      "prompt_tokens": 103,
+      "completion_tokens": 92,
+      "total_tokens": 195
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "高",
+        "模块": "支付"
+      },
+      "raw": "{\"类型\": \"bug\", \"严重度\": \"高\", \"模块\": \"支付\"}",
+      "latency_s": 3.029,
+      "prompt_tokens": 101,
+      "completion_tokens": 138,
+      "total_tokens": 239
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "需求",
+        "严重度": "低",
+        "模块": "其他"
+      },
+      "raw": "{\"类型\": \"需求\", \"严重度\": \"低\", \"模块\": \"其他\"}",
+      "latency_s": 1.602,
+      "prompt_tokens": 101,
+      "completion_tokens": 169,
+      "total_tokens": 270
+    },
+    {
+      "ok": true,
+      "result": {
+        "类型": "bug",
+        "严重度": "高",
+        "模块": "列表"
+      },
+      "raw": "{\"类型\":\"bug\",\"严重度\":\"高\",\"模块\":\"列表\"}",
+      "latency_s": 2.952,
+      "prompt_tokens": 101,
+      "completion_tokens": 219,
+      "total_tokens": 320
+    }
+  ]
+}

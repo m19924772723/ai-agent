@@ -37,7 +37,7 @@
 | 单元 | 学什么（出处） | 动手做什么 | 验收标准（勾掉才算完成） | 产出位置 | 依赖/时长 |
 |---|---|---|---|---|---|
 | **U1 · 09-29 二**（✅ 已完成）<br>端点与环境打通 | `Extra-Chapter/Extra07-环境配置.md` + `code/chapter4/.env.example`、`llm_client.py` | 建 `labs/ch04-llm-client/`，`uv venv` + 装 openai/dotenv，跑通**流式**调用并采集 TTFT / token / 吞吐 | ① 终端有流式输出；② 打印耗时与 token；③ 笔记贴真实输出片段 | `labs/ch04-llm-client/` + `notes/2026-09-29.md` | 60 min（实际约 75） |
-| **U2 · 09-30 三**（✅ 09-29 提前完成）<br>Agent 与工作流的边界 | 第 1 章《初识智能体》中文正文（选读核心节） | 写 300 字「一个自动化任务为什么用工作流而不是 Agent」，并列出 3 个「加 Agent 反而更差」的点 | ① 不看稿能讲 2 分钟；② 3 个点都能对应具体场景；③ 能说出什么条件下才值得上 Agent | `notes/2026-09-29.md`（U2 单元） | 45 min |
+| **U2 · 09-30 三**（✅ 09-29 完成）<br>Agent 与工作流的边界 | 第 1 章《初识智能体》中文正文（选读核心节） | 写 300 字「一个自动化任务为什么用工作流而不是 Agent」+ 3 个「加 Agent 反而更差」的点；**再用 `labs/ch01-workflow-vs-agent/` 把判断变成数字**（规则 vs Agent 两条路径对比） | ① 不看稿能讲 2 分钟（逐字稿见笔记 §4.1）；② 3 个点都能对应具体场景；③ 能说出什么条件下才值得上 Agent；④ lab 真跑通并留下原始数据 | `notes/2026-09-29.md`（U2）· `labs/ch01-workflow-vs-agent/` · `results/2026-09-29/工作流-vs-Agent实测/` | 45 min + 实测 25 min |
 | **U3 · 10-01 四**<br>工具调用闭环 | `code/chapter1/FirstAgentTest.py` | 复制成 `labs/ch01-toolcall/`，把外部搜索工具换成**自己写的**时间/计算工具，跑通多轮工具调用 | ① 模型连续 ≥2 轮调用自写工具并给出最终答案；② 笔记贴出 tool_call 原始 JSON；③ 无外部付费 API 依赖 | `labs/ch01-toolcall/` | stepfun 端点；75 min |
 | **U4 · 10-02 五**<br>采样参数与结构化输出 | 第 3 章「采样参数」节 | 用 pydantic 定义 schema；**故意**把 `max_tokens` 调小复现「JSON 断句」，再给足 token 修好，两次输出对比 | ① 两段真实输出并排对比；② 记录 `finish_reason`；③ 能解释推理 token 与输出 token 共用一个预算 | `labs/ch03-sampling/` + `notes/` | 60 min |
 | **U5 · 10-03 六**<br>手写 ReAct | 第 4 章经典范式 + `code/chapter4/ReAct.py`、`tools.py` | **不抄示例**，手写 20–40 行 ReAct 循环（思考→行动→观察），跑通一个需要 ≥2 步的任务 | ① 运行日志能看到 ≥2 轮 思考/行动/观察；② 能讲清它与「一次提示词输出 JSON」的区别 | `labs/ch04-react-min/` | U3、U4；90 min |
