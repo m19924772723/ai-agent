@@ -121,6 +121,7 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-09-29 | A 组 | Agent 与 Workflow 的边界：拿一个真实自动化任务讲清为什么用工作流，并给出「值得上 Agent」的判断清单 | `notes/2026-09-29.md`（U2 单元 §3.1–3.3） |
 | 2026-09-29 | A 组 | OpenAI 兼容 API 调用：流式跑通并记录 TTFT/token/耗时（stepfun + deepseek 两家） | `labs/ch04-llm-client/`、`results/2026-09-29/端点流式调用打通/` |
 | 2026-09-29 | F 组 | uv 建 venv 工作流：lab 独立环境 + 解释器与缓存全在 D 盘 | `labs/ch04-llm-client/.venv/pyvenv.cfg` |
 
