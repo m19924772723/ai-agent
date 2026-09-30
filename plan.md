@@ -4,7 +4,7 @@
 > 起点：**第 1 天 = 2026-09-28（周一）**；周次按**周一到周日**，单元编号 U1、U2…
 > 节奏：一天一个单元（45–90 分钟），逐日表只保留**未来 2 周**，后面阶段按周给主题
 > 边界：本目录自成一个学习线，**不与其他工作区交叉链接**；一切产出（笔记 / 实验 / 成果）都写在 `D:\code\hermes\ai-agent` 内
-> **进度**：第 1 天 ✅（建库）、第 2 天 ✅（U1+U2）｜下一个：**第 3 天 = 09-30，U3 工具调用闭环**
+> **进度**：第 1 天 ✅（建库）、第 2 天 ✅（U1+U2）、第 3 天 ✅（U3）｜下一个：**第 4 天 = 10-01，U4 采样参数与结构化输出**
 
 ## 0. 怎么用这份计划
 
@@ -39,7 +39,7 @@
 | **第 1 天 · 09-28 一**（✅ 已完成）<br>前置准备（建库） | —（无教材章节，属于本目录搭建） | 建学习目录：母本克隆入库、`references/hello-agents`、`progress.md` 打卡表、`tech-stack.md` 技术验收表、`software.md` 软件清单、`notes/_模板.md` | ① 母本可离线读章节；② 四张表齐全；③ 结果归档到 `results/2026-09-28/` | `results/2026-09-28/资料库搭建/` | 约 2 小时（当天完成） |
 | **第 2 天 · 09-29 二**（✅ 已完成，两个单元）<br>U1 端点与环境打通 | `Extra-Chapter/Extra07-环境配置.md` + `code/chapter4/.env.example`、`llm_client.py` | 建 `labs/ch04-llm-client/`，`uv venv` + 装 openai/dotenv，跑通**流式**调用并采集 TTFT / token / 吞吐 | ① 终端有流式输出；② 打印耗时与 token；③ 笔记贴真实输出片段 | `labs/ch04-llm-client/` + `notes/2026-09-29.md` | 60 min |
 | **第 2 天 · 09-29 二**（✅ 已完成，同上）<br>U2 Agent 与工作流的边界 | 第 1 章《初识智能体》中文正文（选读核心节） | 写 300 字「一个自动化任务为什么用工作流而不是 Agent」+ 3 个「加 Agent 反而更差」的点；再用 `labs/ch01-workflow-vs-agent/` 把判断变成数字 | ① 不看稿讲 2 分钟（逐字稿在笔记 §4.1）；② 3 个点都能对应具体场景；③ 能说出什么条件下才值得上 Agent；④ lab 真跑通并留原始数据 | `notes/2026-09-29.md`（U2）· `labs/ch01-workflow-vs-agent/` · `results/2026-09-29/工作流-vs-Agent实测/` | 45 min + 实测 25 min |
-| **第 3 天 · 09-30 三**<br>U3 工具调用闭环 | `code/chapter1/FirstAgentTest.py` | 复制成 `labs/ch01-toolcall/`，把外部搜索工具换成**自己写的**时间/计算工具，跑通多轮工具调用 | ① 模型连续 ≥2 轮调用自写工具并给出最终答案；② 笔记贴出 tool_call 原始 JSON；③ 无外部付费 API 依赖 | `labs/ch01-toolcall/` | stepfun/deepseek 端点；75 min |
+| **第 3 天 · 09-30 三**（✅ 已完成）<br>U3 工具调用闭环 | `code/chapter1/FirstAgentTest.py` | 复制成 `labs/ch01-toolcall/`，把外部搜索工具换成**自己写的**时间/计算工具，跑通多轮工具调用；并对比原生 function calling 与提示词+正则两条契约 | ① 模型连续 ≥2 轮调用自写工具并给出最终答案；② 笔记贴出 tool_call 原始 JSON；③ 无外部付费 API 依赖 | `labs/ch01-toolcall/` · `notes/2026-09-30.md` · `results/2026-09-30/工具调用闭环/` | 75 min（实际约 90） |
 | **第 4 天 · 10-01 四**<br>U4 采样参数与结构化输出 | 第 3 章「采样参数」节 | 用 pydantic 定义 schema；**故意**把 `max_tokens` 调小复现「JSON 断句」，再给足 token 修好，两次输出对比 | ① 两段真实输出并排对比；② 记录 `finish_reason`；③ 能解释推理 token 与输出 token 共用一个预算 | `labs/ch03-sampling/` + `notes/` | 60 min |
 | **第 5 天 · 10-02 五**<br>U5 手写 ReAct | 第 4 章经典范式 + `code/chapter4/ReAct.py`、`tools.py` | **不抄示例**，手写 20–40 行 ReAct 循环（思考→行动→观察），跑通一个需要 ≥2 步的任务 | ① 运行日志能看到 ≥2 轮 思考/行动/观察；② 能讲清它与「一次提示词输出 JSON」的区别 | `labs/ch04-react-min/` | U3、U4；90 min |
 | **第 6 天 · 10-03 六**<br>U6 三范式对比 | `code/chapter4/Reflection.py`、`Plan_and_solve.py` | 各跑一遍（换成自己的小任务），做对比表：适用场景/成本/失败模式 | ① 对比表每格都有具体例子（不是形容词）；② 三个范式各自的失败模式能各举一例 | `results/2026-10-03/范式对比/` | 90 min |

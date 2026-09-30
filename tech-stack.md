@@ -121,6 +121,7 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-09-30 | A 组 | Function Calling / 工具调用契约：3 个自写工具跑通 ≥2 轮调用闭环，并对比原生 tools schema 与提示词+正则（2489 vs 3051 token、8.16 vs 11.29 s） | `labs/ch01-toolcall/`、`results/2026-09-30/工具调用闭环/`、`notes/2026-09-30.md` |
 | 2026-09-29 | A 组 | Agent 与 Workflow 的边界：拿一个真实自动化任务讲清为什么用工作流，并给出「值得上 Agent」的判断清单 + **实测对比**（延迟 0.2 ms vs 70.5 s、0 vs 5809 token、两遍漂移 33%） | `notes/2026-09-29.md`（U2）、`labs/ch01-workflow-vs-agent/`、`results/2026-09-29/工作流-vs-Agent实测/` |
 | 2026-09-29 | A 组 | OpenAI 兼容 API 调用：流式跑通并记录 TTFT/token/耗时（stepfun + deepseek 两家） | `labs/ch04-llm-client/`、`results/2026-09-29/端点流式调用打通/` |
 | 2026-09-29 | F 组 | uv 建 venv 工作流：lab 独立环境 + 解释器与缓存全在 D 盘 | `labs/ch04-llm-client/.venv/pyvenv.cfg` |
