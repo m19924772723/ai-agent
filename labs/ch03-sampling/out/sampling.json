@@ -1,0 +1,237 @@
+{
+  "ts": "2026-10-01T14:44:38",
+  "model": "step-3.7-flash",
+  "article_chars": 216,
+  "runs": [
+    {
+      "run": "run1 小预算(64)",
+      "max_tokens": 64,
+      "temperature": 0,
+      "stream": false,
+      "json_mode": false,
+      "finish_reason": "length",
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 245,
+        "total_tokens": 309,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      },
+      "seconds": 4.04,
+      "ok": false,
+      "result": "校验失败 → : Invalid JSON: EOF while parsing a value at line 1 column 0",
+      "raw_chars": 0,
+      "raw_tail": "",
+      "completion_tokens": 64,
+      "prompt_tokens": 245,
+      "json_fragment_chars": 0
+    },
+    {
+      "run": "run2 足额(8192)",
+      "max_tokens": 8192,
+      "temperature": 0,
+      "stream": false,
+      "json_mode": false,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 1423,
+        "prompt_tokens": 245,
+        "total_tokens": 1668,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 192,
+          "image_tokens": null,
+          "text_tokens": null
+        },
+        "cached_tokens": 192
+      },
+      "seconds": 9.84,
+      "ok": true,
+      "result": {
+        "title": "2026年9月内部知识库问答升级落地",
+        "key_points": [
+          "混合检索替换纯关键词，召回率从41%提升至68%",
+          "答案新增引用来源，用户投诉“胡说”比例从12%降至3%",
+          "搭建20条离线评测集，改提示词后跑评测避免场景回退"
+        ],
+        "tags": [
+          "内部知识库",
+          "问答系统优化",
+          "检索升级",
+          "用户体验提升"
+        ],
+        "todos": [
+          "扩充离线评测集至100条",
+          "接入线上埋点观察真实提问分布",
+          "解决知识库人工维护不足导致的答案噪音问题"
+        ]
+      },
+      "raw_chars": 329,
+      "raw_tail": "   ],\n    \"tags\": [\"内部知识库\", \"问答系统优化\", \"检索升级\", \"用户体验提升\"],\n    \"todos\": [\n        \"扩充离线评测集至100条\",\n        \"接入线上埋点观察真实提问分布\",\n        \"解决知识库人工维护不足导致的答案噪音问题\"\n    ]\n}",
+      "completion_tokens": 1423,
+      "prompt_tokens": 245,
+      "json_fragment_chars": 329
+    },
+    {
+      "run": "run3 高温(1.2)",
+      "max_tokens": 8192,
+      "temperature": 1.2,
+      "stream": false,
+      "json_mode": false,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 1646,
+        "prompt_tokens": 245,
+        "total_tokens": 1891,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 192,
+          "image_tokens": null,
+          "text_tokens": null
+        },
+        "cached_tokens": 192
+      },
+      "seconds": 10.82,
+      "ok": true,
+      "result": {
+        "title": "团队推动内部知识库问答从能用升级至敢用",
+        "key_points": [
+          "检索方式由纯关键词替换为混合检索，召回率从41%提升至68%",
+          "为答案增加引用来源，用户投诉“胡说”的比例从12%降至3%",
+          "搭建20条离线评测集，每次改提示词都跑测避免场景崩坏"
+        ],
+        "tags": [
+          "内部知识库",
+          "混合检索",
+          "问答系统优化"
+        ],
+        "todos": [
+          "将离线评测集扩容至100条",
+          "接入线上埋点观察真实提问分布",
+          "建立知识库内容更新维护机制，避免无人维护文档成为答案噪音"
+        ]
+      },
+      "raw_chars": 338,
+      "raw_tail": "    ],\n    \"tags\": [\"内部知识库\", \"混合检索\", \"问答系统优化\"],\n    \"todos\": [\n        \"将离线评测集扩容至100条\",\n        \"接入线上埋点观察真实提问分布\",\n        \"建立知识库内容更新维护机制，避免无人维护文档成为答案噪音\"\n    ]\n}",
+      "completion_tokens": 1646,
+      "prompt_tokens": 245,
+      "json_fragment_chars": 338
+    },
+    {
+      "run": "run4 流式+小预算",
+      "max_tokens": 64,
+      "temperature": 0,
+      "stream": true,
+      "json_mode": false,
+      "finish_reason": "length",
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 245,
+        "total_tokens": 309,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      },
+      "seconds": 1.84,
+      "ok": false,
+      "result": "校验失败 → : Invalid JSON: EOF while parsing a value at line 1 column 0",
+      "raw_chars": 0,
+      "raw_tail": "",
+      "completion_tokens": 64,
+      "prompt_tokens": 245,
+      "json_fragment_chars": 0
+    },
+    {
+      "run": "run5 json_object",
+      "max_tokens": 8192,
+      "temperature": 0,
+      "stream": false,
+      "json_mode": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 905,
+        "prompt_tokens": 245,
+        "total_tokens": 1150,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 192,
+          "image_tokens": null,
+          "text_tokens": null
+        },
+        "cached_tokens": 192
+      },
+      "seconds": 9.38,
+      "ok": true,
+      "result": {
+        "title": "2026年9月内部知识库问答系统升级",
+        "key_points": [
+          "混合检索替换纯关键词，召回率从41%提升至68%",
+          "答案新增引用来源，用户投诉“胡说”比例从12%降至3%",
+          "搭建20条离线评测集，改提示词必跑测防场景互损"
+        ],
+        "tags": [
+          "内部知识库",
+          "问答系统优化",
+          "检索升级",
+          "用户体验提升"
+        ],
+        "todos": [
+          "扩充离线评测集至100条",
+          "接入线上埋点观察真实提问分布"
+        ]
+      },
+      "raw_chars": 263,
+      "raw_tail": "“胡说”比例从12%降至3%\",\n    \"搭建20条离线评测集，改提示词必跑测防场景互损\"\n  ],\n  \"tags\": [\"内部知识库\", \"问答系统优化\", \"检索升级\", \"用户体验提升\"],\n  \"todos\": [\n    \"扩充离线评测集至100条\",\n    \"接入线上埋点观察真实提问分布\"\n  ]\n}",
+      "completion_tokens": 905,
+      "prompt_tokens": 245,
+      "json_fragment_chars": 263
+    }
+  ]
+}
