@@ -121,6 +121,7 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-02 | C 组 | ReAct 手写循环：不看示例写出「思考→行动→观察」循环并跑通（3 轮调用 + 收尾）；对照组证明"没工具会自信算错"（687 token 但差两个数量级） | `labs/ch04-react-min/`、`results/2026-10-02/手写ReAct/`、`notes/2026-10-02.md` |
 | 2026-10-01 | A 组 | 结构化输出：用 pydantic 强校验模型输出，并复现「预算被推理 token 挤掉 → 空输出/断句」的现象（`finish_reason=length`） | `labs/ch03-sampling/`、`results/2026-10-01/采样参数与结构化输出/`、`notes/2026-10-01.md` |
 | 2026-10-01 | G 组 | 采样参数：说清 temperature / top_p / max_tokens 的影响，并用 5 组对照量化（含流式 `finish_reason`、`json_object` 省 36% token） | 同上 |
 | 2026-09-30 | A 组 | Function Calling / 工具调用契约：3 个自写工具跑通 ≥2 轮调用闭环，并对比原生 tools schema 与提示词+正则（2489 vs 3051 token、8.16 vs 11.29 s） | `labs/ch01-toolcall/`、`results/2026-09-30/工具调用闭环/`、`notes/2026-09-30.md` |
