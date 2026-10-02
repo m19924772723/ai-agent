@@ -121,6 +121,8 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-04 | C 组 | 自研框架入门：装 `hello-agents` 1.0.0 跑通 1 个带工具 agent（两条注册路径），读框架 trace 看清工具契约/运行时状态/并行 tool_calls；框架自动注册 4 个内置工具（首轮 prompt 1523 token） | `labs/ch07-simple-agent/`、`results/2026-10-04/框架探针/`、`notes/2026-10-04.md` |
+| 2026-10-03 | C 组 | Reflection / Plan-and-Solve：同题对照三范式，客观判分（reflection 唯一答对）；成本 6810 / 3760 / 2959 token 差 2.3 倍，各自失败模式各举一例 | `labs/ch04-paradigms/`、`results/2026-10-03/范式对比/`、`notes/2026-10-03.md` |
 | 2026-10-02 | C 组 | ReAct 手写循环：不看示例写出「思考→行动→观察」循环并跑通（3 轮调用 + 收尾）；对照组证明"没工具会自信算错"（687 token 但差两个数量级） | `labs/ch04-react-min/`、`results/2026-10-02/手写ReAct/`、`notes/2026-10-02.md` |
 | 2026-10-01 | A 组 | 结构化输出：用 pydantic 强校验模型输出，并复现「预算被推理 token 挤掉 → 空输出/断句」的现象（`finish_reason=length`） | `labs/ch03-sampling/`、`results/2026-10-01/采样参数与结构化输出/`、`notes/2026-10-01.md` |
 | 2026-10-01 | G 组 | 采样参数：说清 temperature / top_p / max_tokens 的影响，并用 5 组对照量化（含流式 `finish_reason`、`json_object` 省 36% token） | 同上 |
