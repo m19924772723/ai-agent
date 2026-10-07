@@ -121,6 +121,8 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-06 | E 组 | 评测集设计：自建 20 条带人工真值的评测集（含 4 条边界样本），真值由代码自检格式与分布 | `labs/ch12-eval/dataset.json`、`results/2026-10-06/评测集与Judge一致性/` |
+| 2026-10-06 | E 组 | LLM-as-judge：与规则判分对比一致性（20/20 一致、字段正确率逐项相同），并用注入 3 条错误的探针验证裁判敏感度（3/3 检出） | `labs/ch12-eval/`、`notes/2026-10-06.md` |
 | 2026-10-05 | F 组 | pytest：给 lab 的循环补 13 个用例（正常 3 / 异常 4 / 边界 4 / 真机 2），离线注入假模型 0.05 s 零 token | `labs/ch07-agentloop/test_agentloop.py`、`results/2026-10-05/AgentLoop与测试/` |
 | 2026-10-05 | C 组 | 自研框架 / Agent Loop：自写含「预算控制 + 终止条件 + 打转止损」的 Agent Loop，并修通母本 chapter7 在框架 1.0.0 下的兼容问题 | `labs/ch07-agentloop/agentloop.py`、`labs/ch07-simple-agent/COMPAT-REPORT.md` |
 | 2026-10-04 | C 组 | 自研框架入门：装 `hello-agents` 1.0.0 跑通 1 个带工具 agent（两条注册路径），读框架 trace 看清工具契约/运行时状态/并行 tool_calls；框架自动注册 4 个内置工具（首轮 prompt 1523 token） | `labs/ch07-simple-agent/`、`results/2026-10-04/框架探针/`、`notes/2026-10-04.md` |
