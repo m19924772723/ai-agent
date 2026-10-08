@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<title>Agent 调用观测面板 · 2026-10-08T10:58:07</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; background: #0f1216;
+         color: #d7dde4; margin: 0; padding: 24px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .dim { color: #7a828c; font-size: 12px; margin-bottom: 16px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+            gap: 10px; margin-bottom: 18px; }
+  .card { background: #171c22; border: 1px solid #232a33; border-radius: 10px; padding: 12px; }
+  .k { font-size: 12px; color: #7a828c; } .v { font-size: 18px; font-weight: 600; margin-top: 4px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th { text-align: left; color: #9aa3ad; font-weight: 500; padding: 8px 10px; border-bottom: 1px solid #232a33; }
+  td { padding: 8px 10px; border-bottom: 1px solid #1a2027; vertical-align: top; }
+  td.inp { color: #c5cdd6; max-width: 220px; } td.out { color: #8fd3a8; max-width: 260px; }
+  tr.fail td { background: #2a1719; color: #ff9c9c; }
+  tr.detail { display: none; background: #11161b; color: #aab4be; }
+  tr.detail td { white-space: pre-wrap; word-break: break-all; }
+  tr.detail.open { display: table-row; }
+  tbody tr.click { cursor: pointer; }
+</style></head><body>
+<h1>Agent 调用观测面板</h1>
+<div class="dim">2026-10-08T10:58:07 · 采集：collect.py → 渲染：render.py · 点击行展开完整输入输出</div>
+<div class="cards"><div class="card"><div class="k">调用次数</div><div class="v">6</div></div><div class="card"><div class="k">总 token</div><div class="v">2,035</div></div><div class="card"><div class="k">平均耗时</div><div class="v">3158.8 ms</div></div><div class="card"><div class="k">失败次数</div><div class="v">0</div></div><div class="card"><div class="k">模型</div><div class="v">step-3.7-flash</div></div><div class="card"><div class="k">成本口径</div><div class="v">未定价</div></div></div>
+
+    <table id="tbl">
+      <thead><tr><th>ID</th><th>时间</th><th>输入摘要</th><th>输出摘要</th>
+      <th>耗时</th><th>Tokens(P/C)</th><th>成本</th><th>finish</th></tr></thead>
+      <tbody><tr class=""><td>C01</td><td>10:57:52</td><td class="inp">付款的时候页面直接闪退了，钱扣了订单没生成，重新登录也看不到订单记录，怎么办？</td><td class="out">{&quot;类型&quot;: &quot;bug&quot;, &quot;严重度&quot;: &quot;高&quot;, &quot;模块&quot;: &quot;支付&quot;}</td><td>4422 ms</td><td>P 164 / C 120</td><td>未定价</td><td>stop</td></tr><tr class="detail"><td colspan="8"><b>完整输入：</b>付款的时候页面直接闪退了，钱扣了订单没生成，重新登录也看不到订单记录，怎么办？<br><b>完整输出：</b>{&quot;类型&quot;: &quot;bug&quot;, &quot;严重度&quot;: &quot;高&quot;, &quot;模块&quot;: &quot;支付&quot;}</td></tr><tr class=""><td>C02</td><td>10:57:55</td><td class="inp">希望搜索页能支持按时间排序，现在最新发布的内容永远排不到前面。</td><td class="out">{&quot;类型&quot;: &quot;需求&quot;, &quot;严重度&quot;: &quot;中&quot;, &quot;模块&quot;: &quot;搜索&quot;}</td><td>2868 ms</td><td>P 159 / C 240</td><td>未定价</td><td>stop</td></tr><tr class="detail"><td colspan="8"><b>完整输入：</b>希望搜索页能支持按时间排序，现在最新发布的内容永远排不到前面。<br><b>完整输出：</b>{&quot;类型&quot;: &quot;需求&quot;, &quot;严重度&quot;: &quot;中&quot;, &quot;模块&quot;: &quot;搜索&quot;}</td></tr><tr class=""><td>C03</td><td>10:57:57</td><td class="inp">打开详情页白屏，刷新三次才好，第一次加载一直转圈。</td><td class="out">{&quot;类型&quot;: &quot;bug&quot;, &quot;严重度&quot;: &quot;中&quot;, &quot;模块&quot;: &quot;内容&quot;}</td><td>1912 ms</td><td>P 157 / C 123</td><td>未定价</td><td>stop</td></tr><tr class="detail"><td colspan="8"><b>完整输入：</b>打开详情页白屏，刷新三次才好，第一次加载一直转圈。<br><b>完整输出：</b>{&quot;类型&quot;: &quot;bug&quot;, &quot;严重度&quot;: &quot;中&quot;, &quot;模块&quot;: &quot;内容&quot;}</td></tr><tr class=""><td>C04</td><td>10:57:59</td><td class="inp">登录后偶尔会自动退出，有时候看两篇文章就掉线了，体验很差。</td><td class="out">{&quot;类型&quot;: &quot;bug&quot;, &quot;严重度&quot;: &quot;中&quot;, &quot;模块&quot;: &quot;登录&quot;}</td><td>1862 ms</td><td>P 159 / C 144</td><td>未定价</td><td>stop</td></tr><tr class="detail"><td colspan="8"><b>完整输入：</b>登录后偶尔会自动退出，有时候看两篇文章就掉线了，体验很差。<br><b>完整输出：</b>{&quot;类型&quot;: &quot;bug&quot;, &quot;严重度&quot;: &quot;中&quot;, &quot;模块&quot;: &quot;登录&quot;}</td></tr><tr class=""><td>C05</td><td>10:58:04</td><td class="inp">提交评价的时候一直转圈，最后提示保存失败，但评论其实已经写进去了。</td><td class="out">{&quot;类型&quot;: &quot;bug&quot;, &quot;严重度&quot;: &quot;中&quot;, &quot;模块&quot;: &quot;内容&quot;}</td><td>5177 ms</td><td>P 160 / C 374</td><td>未定价</td><td>stop</td></tr><tr class="detail"><td colspan="8"><b>完整输入：</b>提交评价的时候一直转圈，最后提示保存失败，但评论其实已经写进去了。<br><b>完整输出：</b>{&quot;类型&quot;: &quot;bug&quot;, &quot;严重度&quot;: &quot;中&quot;, &quot;模块&quot;: &quot;内容&quot;}</td></tr><tr class=""><td>C06</td><td>10:58:07</td><td class="inp">能不能加个夜间模式？晚上刷手机白底太刺眼了。</td><td class="out">{&quot;类型&quot;: &quot;需求&quot;, &quot;严重度&quot;: &quot;低&quot;, &quot;模块&quot;: &quot;其他&quot;}</td><td>2712 ms</td><td>P 156 / C 79</td><td>未定价</td><td>stop</td></tr><tr class="detail"><td colspan="8"><b>完整输入：</b>能不能加个夜间模式？晚上刷手机白底太刺眼了。<br><b>完整输出：</b>{&quot;类型&quot;: &quot;需求&quot;, &quot;严重度&quot;: &quot;低&quot;, &quot;模块&quot;: &quot;其他&quot;}</td></tr></tbody>
+    </table>
+<script>
+  const rows = document.querySelectorAll('#tbl tbody tr.click');
+  rows.forEach(r => r.addEventListener('click', () => {
+    const d = r.nextElementSibling;
+    if (d && d.classList.contains('detail')) d.classList.toggle('open');
+  }));
+</script>
+</body></html>

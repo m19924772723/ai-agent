@@ -121,6 +121,8 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-08 | H 组 | 可观测性：采集 6 次真实调用五要素（输入/输出/延迟/token/finish_reason）+ 自渲染单文件面板（展开明细/异常红标）；Langfuse SDK 4.17.0 接入代码就绪（配 key 即发云 trace，未配仅本地） | `labs/ch12-observe/`、`results/2026-10-08/调用观测面板/` |
+| 2026-10-08 | H 组 | 观测成本口径：无官方单价前成本列显示「未定价」，不编数字；token 数作成本代理 | `labs/ch12-observe/out/summary.json`、`notes/2026-10-08.md` |
 | 2026-10-06 | E 组 | 评测集设计：自建 20 条带人工真值的评测集（含 4 条边界样本），真值由代码自检格式与分布 | `labs/ch12-eval/dataset.json`、`results/2026-10-06/评测集与Judge一致性/` |
 | 2026-10-06 | E 组 | LLM-as-judge：与规则判分对比一致性（20/20 一致、字段正确率逐项相同），并用注入 3 条错误的探针验证裁判敏感度（3/3 检出） | `labs/ch12-eval/`、`notes/2026-10-06.md` |
 | 2026-10-05 | F 组 | pytest：给 lab 的循环补 13 个用例（正常 3 / 异常 4 / 边界 4 / 真机 2），离线注入假模型 0.05 s 零 token | `labs/ch07-agentloop/test_agentloop.py`、`results/2026-10-05/AgentLoop与测试/` |

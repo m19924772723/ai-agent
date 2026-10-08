@@ -1,0 +1,95 @@
+{
+  "ts": "2026-10-08T10:58:07",
+  "model": "step-3.7-flash",
+  "calls": 6,
+  "total_tokens": 2035,
+  "avg_latency_ms": 3158.8,
+  "failed": 0,
+  "price_per_1k_rmb": "未定价",
+  "rows": [
+    {
+      "input": "付款的时候页面直接闪退了，钱扣了订单没生成，重新登录也看不到订单记录，怎么办？",
+      "output": "{\"类型\": \"bug\", \"严重度\": \"高\", \"模块\": \"支付\"}",
+      "latency_ms": 4421.6,
+      "finish_reason": "stop",
+      "tokens": {
+        "prompt": 164,
+        "completion": 120,
+        "total": 284
+      },
+      "id": "C01",
+      "ts": "10:57:52",
+      "model": "step-3.7-flash"
+    },
+    {
+      "input": "希望搜索页能支持按时间排序，现在最新发布的内容永远排不到前面。",
+      "output": "{\"类型\": \"需求\", \"严重度\": \"中\", \"模块\": \"搜索\"}",
+      "latency_ms": 2867.6,
+      "finish_reason": "stop",
+      "tokens": {
+        "prompt": 159,
+        "completion": 240,
+        "total": 399
+      },
+      "id": "C02",
+      "ts": "10:57:55",
+      "model": "step-3.7-flash"
+    },
+    {
+      "input": "打开详情页白屏，刷新三次才好，第一次加载一直转圈。",
+      "output": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"内容\"}",
+      "latency_ms": 1912.4,
+      "finish_reason": "stop",
+      "tokens": {
+        "prompt": 157,
+        "completion": 123,
+        "total": 280
+      },
+      "id": "C03",
+      "ts": "10:57:57",
+      "model": "step-3.7-flash"
+    },
+    {
+      "input": "登录后偶尔会自动退出，有时候看两篇文章就掉线了，体验很差。",
+      "output": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"登录\"}",
+      "latency_ms": 1861.7,
+      "finish_reason": "stop",
+      "tokens": {
+        "prompt": 159,
+        "completion": 144,
+        "total": 303
+      },
+      "id": "C04",
+      "ts": "10:57:59",
+      "model": "step-3.7-flash"
+    },
+    {
+      "input": "提交评价的时候一直转圈，最后提示保存失败，但评论其实已经写进去了。",
+      "output": "{\"类型\": \"bug\", \"严重度\": \"中\", \"模块\": \"内容\"}",
+      "latency_ms": 5177.1,
+      "finish_reason": "stop",
+      "tokens": {
+        "prompt": 160,
+        "completion": 374,
+        "total": 534
+      },
+      "id": "C05",
+      "ts": "10:58:04",
+      "model": "step-3.7-flash"
+    },
+    {
+      "input": "能不能加个夜间模式？晚上刷手机白底太刺眼了。",
+      "output": "{\"类型\": \"需求\", \"严重度\": \"低\", \"模块\": \"其他\"}",
+      "latency_ms": 2712.1,
+      "finish_reason": "stop",
+      "tokens": {
+        "prompt": 156,
+        "completion": 79,
+        "total": 235
+      },
+      "id": "C06",
+      "ts": "10:58:07",
+      "model": "step-3.7-flash"
+    }
+  ]
+}
