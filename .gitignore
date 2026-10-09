@@ -10,7 +10,8 @@ references/hello-agents/
 *.pem
 .secrets/
 
-# ---- Python 环境 ----
+# ---- 依赖目录（Python / Node）----
+node_modules/
 .venv/
 venv/
 env/

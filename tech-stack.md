@@ -121,6 +121,8 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-09 | E 组 | promptfoo A/B：同一任务两版提示词（few-shot 锚点 vs 纯口径）在 20 条真值上对比，40 次真实调用；严重度 15/20→19/20、全对 12/20→15/20、McNemar p=0.375（小样本不显著，方向正面） | `labs/ch12-eval/promptfooconfig.yaml`、`README_AB.md`、`results/2026-10-09/提示词A-B/` |
+| 2026-10-09 | E 组 | 推理模型结构化输出兼容性：step-3.7-flash 会把 Thinking 文本写进 content → 提示词放 system + 多位置 raw_decode 容错解析（记入踩坑） | `labs/ch12-eval/analyze_ab.py`、`notes/2026-10-09.md` |
 | 2026-10-08 | H 组 | 可观测性：采集 6 次真实调用五要素（输入/输出/延迟/token/finish_reason）+ 自渲染单文件面板（展开明细/异常红标）；Langfuse SDK 4.17.0 接入代码就绪（配 key 即发云 trace，未配仅本地） | `labs/ch12-observe/`、`results/2026-10-08/调用观测面板/` |
 | 2026-10-08 | H 组 | 观测成本口径：无官方单价前成本列显示「未定价」，不编数字；token 数作成本代理 | `labs/ch12-observe/out/summary.json`、`notes/2026-10-08.md` |
 | 2026-10-06 | E 组 | 评测集设计：自建 20 条带人工真值的评测集（含 4 条边界样本），真值由代码自检格式与分布 | `labs/ch12-eval/dataset.json`、`results/2026-10-06/评测集与Judge一致性/` |

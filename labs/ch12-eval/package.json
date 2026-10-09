@@ -1,0 +1,16 @@
+{
+  "name": "ch12-eval",
+  "version": "1.0.0",
+  "description": "- 母本：第 12 章《智能体性能评估》—— 12.1 评估基础（12.1.1 为何需要评估 / 12.1.2 主流基准）、12.4 数据生成与 LLM Judge - 参考代码：`code/chapter12/08_data_generation_llm_judge.py`（框架 `hello_agents.evaluation.LLMJudge` 的用法） - **本 lab 不依赖框架**：用裸 SDK 自己写打分器，原因是本单元要比的是\"两套打分器的一致性\"，要用同一份预测结果喂给两者，框架的 LLMJudge 是\"从问题生成答案再打分\"，形态对不上。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "promptfoo": "^0.124.0"
+  }
+}

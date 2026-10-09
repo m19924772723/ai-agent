@@ -1,0 +1,95 @@
+# U13 A/B：严重度要不要加 few-shot 锚点？（基于 U9 评测集，20 条真值）
+# 运行：npx promptfoo eval --output out/results.json   （在 labs/ch12-eval 下）
+description: severity-fewshot-ab
+prompts:
+  - file://prompts/v1_severity_plain.yaml
+  - file://prompts/v2_severity_fewshot.yaml
+providers:
+  - id: openai:chat:step-3.7-flash
+    config:
+      apiBaseUrl: https://api.stepfun.com/v1
+      apiKeyEnvar: LLM_API_KEY
+      temperature: 0
+      max_tokens: 2048
+# 不设 transform：保留模型原始输出，判分统一在 analyze_ab.py（Python 侧多位置 raw_decode）做
+tests:
+  - vars:
+      feedback: "付款的时候页面直接闪退了，钱扣了订单没生成"
+    description: "S01 · 真值 bug/高/支付"
+    metadata: {"id": "S01", "true": {"类型": "bug", "严重度": "高", "模块": "支付"}}
+  - vars:
+      feedback: "商品列表加载特别慢，滑一次要等三四秒"
+    description: "S02 · 真值 体验/中/列表"
+    metadata: {"id": "S02", "true": {"类型": "体验", "严重度": "中", "模块": "列表"}}
+  - vars:
+      feedback: "登录一直提示验证码错误，换浏览器也一样"
+    description: "S03 · 真值 bug/高/登录"
+    metadata: {"id": "S03", "true": {"类型": "bug", "严重度": "高", "模块": "登录"}}
+  - vars:
+      feedback: "搜索转圈好几秒才出结果，等得心累"
+    description: "S04 · 真值 体验/中/搜索"
+    metadata: {"id": "S04", "true": {"类型": "体验", "严重度": "中", "模块": "搜索"}}
+  - vars:
+      feedback: "希望搜索页能支持按时间排序"
+    description: "S05 · 真值 需求/低/搜索"
+    metadata: {"id": "S05", "true": {"类型": "需求", "严重度": "低", "模块": "搜索"}}
+  - vars:
+      feedback: "订单列表翻页到第二页就卡住不动了"
+    description: "S06 · 真值 bug/中/列表"
+    metadata: {"id": "S06", "true": {"类型": "bug", "严重度": "中", "模块": "列表"}}
+  - vars:
+      feedback: "打开详情页白屏，刷新三次才好"
+    description: "S07 · 真值 bug/中/内容"
+    metadata: {"id": "S07", "true": {"类型": "bug", "严重度": "中", "模块": "内容"}}
+  - vars:
+      feedback: "退款提交后没有任何提示，不知道成功没有"
+    description: "S08 · 真值 体验/中/支付"
+    metadata: {"id": "S08", "true": {"类型": "体验", "严重度": "中", "模块": "支付"}}
+  - vars:
+      feedback: "首页图片加载很慢，半天不出图"
+    description: "S09 · 真值 体验/中/内容"
+    metadata: {"id": "S09", "true": {"类型": "体验", "严重度": "中", "模块": "内容"}}
+  - vars:
+      feedback: "能不能加一个导出 Excel 的按钮"
+    description: "S10 · 真值 需求/低/其他"
+    metadata: {"id": "S10", "true": {"类型": "需求", "严重度": "低", "模块": "其他"}}
+  - vars:
+      feedback: "支付成功后没收到通知，客服入口也找不到"
+    description: "S11 · 真值 体验/中/支付"
+    metadata: {"id": "S11", "true": {"类型": "体验", "严重度": "中", "模块": "支付"}}
+  - vars:
+      feedback: "建议把常用功能放到首页，现在要点三层"
+    description: "S12 · 真值 需求/低/内容"
+    metadata: {"id": "S12", "true": {"类型": "需求", "严重度": "低", "模块": "内容"}}
+  - vars:
+      feedback: "账号在另一台手机登录后，这台就被踢出去了，希望提示一下"
+    description: "S13 · 真值 需求/低/登录"
+    metadata: {"id": "S13", "true": {"类型": "需求", "严重度": "低", "模块": "登录"}}
+  - vars:
+      feedback: "搜索结果里混进了很多不相关的内容，翻半天找不到想要的"
+    description: "S14 · 真值 体验/中/搜索"
+    metadata: {"id": "S14", "true": {"类型": "体验", "严重度": "中", "模块": "搜索"}}
+  - vars:
+      feedback: "优惠券明明还没过期，结算时却说不可用"
+    description: "S15 · 真值 bug/高/支付"
+    metadata: {"id": "S15", "true": {"类型": "bug", "严重度": "高", "模块": "支付"}}
+  - vars:
+      feedback: "列表里的商品图片和标题对不上，看着像串了"
+    description: "S16 · 真值 bug/中/列表"
+    metadata: {"id": "S16", "true": {"类型": "bug", "严重度": "中", "模块": "列表"}}
+  - vars:
+      feedback: "希望能自定义消息通知的时间段，晚上别推送"
+    description: "S17 · 真值 需求/低/其他"
+    metadata: {"id": "S17", "true": {"类型": "需求", "严重度": "低", "模块": "其他"}}
+  - vars:
+      feedback: "登录后偶尔会自动退出，一天要重新登录好几次"
+    description: "S18 · 真值 bug/高/登录"
+    metadata: {"id": "S18", "true": {"类型": "bug", "严重度": "高", "模块": "登录"}}
+  - vars:
+      feedback: "详情页文字排版在手机上很难读，字号忽大忽小"
+    description: "S19 · 真值 体验/低/内容"
+    metadata: {"id": "S19", "true": {"类型": "体验", "严重度": "低", "模块": "内容"}}
+  - vars:
+      feedback: "提交评价时一直转圈，最后提示保存失败"
+    description: "S20 · 真值 bug/中/其他"
+    metadata: {"id": "S20", "true": {"类型": "bug", "严重度": "中", "模块": "其他"}}
