@@ -121,6 +121,7 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-10 | E 组 | promptfoo A/B 多轮验证：同一 A/B 复跑 5 轮（200 次调用）+ 配对检验，严重度 +3.4 每轮都赢（t=8.50 p=0.0005）、全对 +1.6（p=0.018）显著；单轮会被噪声骗的教训 | `labs/ch12-eval/analyze_ab_runs.py`、`out/ab_5runs_report.md`、`results/2026-10-10/提示词A-B多轮验证/` |
 | 2026-10-09 | E 组 | promptfoo A/B：同一任务两版提示词（few-shot 锚点 vs 纯口径）在 20 条真值上对比，40 次真实调用；严重度 15/20→19/20、全对 12/20→15/20、McNemar p=0.375（小样本不显著，方向正面） | `labs/ch12-eval/promptfooconfig.yaml`、`README_AB.md`、`results/2026-10-09/提示词A-B/` |
 | 2026-10-09 | E 组 | 推理模型结构化输出兼容性：step-3.7-flash 会把 Thinking 文本写进 content → 提示词放 system + 多位置 raw_decode 容错解析（记入踩坑） | `labs/ch12-eval/analyze_ab.py`、`notes/2026-10-09.md` |
 | 2026-10-08 | H 组 | 可观测性：采集 6 次真实调用五要素（输入/输出/延迟/token/finish_reason）+ 自渲染单文件面板（展开明细/异常红标）；Langfuse SDK 4.17.0 接入代码就绪（配 key 即发云 trace，未配仅本地） | `labs/ch12-observe/`、`results/2026-10-08/调用观测面板/` |
