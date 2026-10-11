@@ -121,6 +121,8 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-11 | C 组 | 工具注册进框架：自己的 3 个工具（get_current_time/calculate/hours_until）注册进 hello-agents 1.0.0 跑通一问三调，trace 证明 3 tool_call 全成功；tool_adapter 修零参函数兼容 | `labs/ch07-tool-registration/`、`results/2026-10-11/我的工具注册进框架/` |
+| 2026-10-11 | C 组 | 证据来源认知：get_history 只有最终对话，工具调用过程在框架 trace（event 字段、写盘缓冲）——验证 Agent 必须逐工具核对 trace 而非看最终答案（「答案对工具错」隐性失败） | `labs/ch07-tool-registration/README.md`、`notes/2026-10-11.md` |
 | 2026-10-10 | E 组 | promptfoo A/B 多轮验证：同一 A/B 复跑 5 轮（200 次调用）+ 配对检验，严重度 +3.4 每轮都赢（t=8.50 p=0.0005）、全对 +1.6（p=0.018）显著；单轮会被噪声骗的教训 | `labs/ch12-eval/analyze_ab_runs.py`、`out/ab_5runs_report.md`、`results/2026-10-10/提示词A-B多轮验证/` |
 | 2026-10-09 | E 组 | promptfoo A/B：同一任务两版提示词（few-shot 锚点 vs 纯口径）在 20 条真值上对比，40 次真实调用；严重度 15/20→19/20、全对 12/20→15/20、McNemar p=0.375（小样本不显著，方向正面） | `labs/ch12-eval/promptfooconfig.yaml`、`README_AB.md`、`results/2026-10-09/提示词A-B/` |
 | 2026-10-09 | E 组 | 推理模型结构化输出兼容性：step-3.7-flash 会把 Thinking 文本写进 content → 提示词放 system + 多位置 raw_decode 容错解析（记入踩坑） | `labs/ch12-eval/analyze_ab.py`、`notes/2026-10-09.md` |
