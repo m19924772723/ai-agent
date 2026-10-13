@@ -51,6 +51,7 @@
 
 | 实验目录 | 对应章节 | 做了什么改造 | 状态 | 笔记 |
 |---|---|---|---|---|
+| `labs/ch07-tool-registration/`（U17 扩展） | 第 7 章后半 | 4 内置工具实测：TodoWrite/DevLog 真实调用并落盘（3 步清单+decision 日志）；Skill=渐进式披露、Task=子代理隔离（源码确认） | 已跑通（16.97 s） | [2026-10-13](../notes/2026-10-13.md) |
 | `labs/ch07-tool-registration/`（U16 扩展） | 第 7 章后半 | 工具调用链：hours_until→calculate 强依赖（trace 自动校验 3 项全过）；发现 SimpleAgent 收尾失败 vs ReActAgent 一次答对（选框架=选行为） | 已跑通（ReAct 2/2；SimpleAgent 4/4 失败留对照） | [2026-10-12](../notes/2026-10-12.md) |
 | `labs/ch07-tool-registration/` | 第 7 章后半 | 自己的 3 个工具（U3 三件套）注册进框架：一问三调全成功（12.69 s），trace 提取 3 tool_call 证据；修零参函数兼容 bug + 发现「答案对工具错」隐性失败 | 已跑通（工具全部成功=True） | [2026-10-11](../notes/2026-10-11.md) |
 | `labs/ch12-eval/`（U14 多轮扩展） | 第 12 章 + promptfoo | A/B 5 轮复跑（200 次真实调用）+ 配对检验：严重度 +3.4 每轮都赢（p=0.0005）、全对 +1.6（p=0.018）；单轮 A/B 会被噪声骗 | 已跑通（5×40=200 次，每轮 23-29 s） | [2026-10-10](../notes/2026-10-10.md) |
