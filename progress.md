@@ -15,7 +15,7 @@
 | 3 大语言模型基础 | BPE / 词向量 / Transformer / 采样 | 调参困惑时回查 | 在读（3.2.1 采样参数已实测） | [2026-10-01](../notes/2026-10-01.md) |
 | **4 经典范式构建** | ReAct / Reflection / Plan-and-Solve | **阶段4 前** | 在读（4.1 客户端 + 4.2/4.3/4.4 三范式实测） | [09-29](../notes/2026-09-29.md)、[10-02](../notes/2026-10-02.md)、[10-03](../notes/2026-10-03.md) |
 | 5 低代码平台搭建 | Coze / Dify / FastGPT / n8n | 要快速出原型时 | 未开始 | — |
-| 6 框架开发实践 | AgentScope / AutoGen / CAMEL / LangGraph | 选型时对照读 | 未开始 | — |
+| 6 框架开发实践 | AgentScope / AutoGen / CAMEL / LangGraph | 选型时对照读 | 已读 6.2/6.3 节 + AgentScope demo 跑通（U18）；AutoGen/CAMEL 待 U19/U20 | [10-14](../notes/2026-10-14.md) |
 | **7 构建你的 Agent 框架** | 自己实现 Agent 循环 / 工具 / 记忆 | **阶段4 前** | 已读 + 代码已跑通（探针 + 自写 Agent Loop + 测试） | [10-04](../notes/2026-10-04.md)、[10-05](../notes/2026-10-05.md) |
 | **8 记忆与检索** | Memory 分层 / RAG 管线 / MarkItDown | **阶段3 精读** | 未开始 | — |
 | **9 上下文工程** | 上下文装配 / 笔记工具 / 终端工具 | **阶段4** | 未开始 | — |
@@ -68,6 +68,7 @@
 | `labs/ch01-workflow-vs-agent/` | 第 1 章 1.4.3 | 同一字段抽取任务：规则工作流 vs Agent 两条路径实测（延迟/token/JSON 成功率/两遍一致性） | 已跑通（12 条 ×2 遍，24 次调用） | [2026-09-29](../notes/2026-09-29.md) |
 | `labs/ch04-llm-client/` | 第 4 章 4.1 | 母本 `llm_client.py` 复刻 + 逐 chunk 时间线 / usage / 吞吐采集，支持 stepfun 与 deepseek 两家 preset | 已跑通（两家端点，U1） | [2026-09-29](../notes/2026-09-29.md) |
 
+| `labs/ch06-agentscope/` | 第 6 章 6.3 | 三国狼人杀 demo 适配（DashScope→OpenAI 兼容）；MsgHub / fanout_pipeline / 结构化输出 / ReActAgent | 已跑通（4 人 1 轮：10 调用 / 10129+1797 token / 46.6 s LLM；判定全对） | [2026-10-14](../notes/2026-10-14.md) |
 ## 四、共创项目（55 个，按需查不打卡）
 
 位置：`D:\code\hermes\ai-agent\references\hello-agents\Co-creation-projects\`。挑同类看它的目录结构与提示词写法，
