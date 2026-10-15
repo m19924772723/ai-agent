@@ -121,6 +121,7 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-15 | C 组 | 多智能体框架 AutoGen：软件开发团队 demo 适配 OpenAI 兼容端点跑通（4 角色/8 消息/46.7 s/依赖 59 MB），生成代码执行验证正确；三框架对比表第 2 行 | `labs/ch06-autogen/`、`results/2026-10-15/autogen-demo/` |
 | 2026-10-13 | C 组 | 框架内置工具实测：Skill（渐进式披露/按需加载）/Task（子代理隔离）/TodoWrite（声明式覆盖/单线程）/DevLog（结构化日志）源码定位；TodoWrite+DevLog 真实调用并落盘（memory/todos/、memory/devlogs/） | `labs/ch07-tool-registration/builtin_tools_probe.py`、`README_U17.md` |
 | 2026-10-12 | C 组 | 工具调用链：hours_until→calculate 强依赖任务，trace 提取 + 自动校验（参数含前步结果/顺序/答案 3 项全过） | `labs/ch07-tool-registration/chained_tools_react.py`、`out/chained_react_run.json` |
 | 2026-10-12 | C 组 | Agent 类型选型：SimpleAgent 收尾失败（4/4 答无法回答，工具链全对）vs ReActAgent 一次答对——选框架=选行为；token 诊断放弃信号 | `labs/ch07-tool-registration/chained_tools.py`、`notes/2026-10-12.md` |
