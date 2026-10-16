@@ -51,6 +51,7 @@
 
 | 实验目录 | 对应章节 | 做了什么改造 | 状态 | 笔记 |
 |---|---|---|---|---|
+| `labs/ch06-camel/` | 第 6 章 CAMEL | 双角色 RolePlaying 电子书协作 demo：作家动态拆任务→心理学家产出（7 轮/84.6 s/任务完成标志触发），产出含实证引用；三框架对比表收官 | 已跑通（deepseek-flash） | [2026-10-16](../notes/2026-10-16.md) |
 | `labs/ch06-autogen/` | 第 6 章 AutoGen | 四角色软件开发团队 demo：PM→工程师→审查→验收（8 消息/46.7 s），生成代码验证 5.0 ✓；采坑三记（402 静默/TERMINATE 文本/UserProxy 无头） | 已跑通（deepseek-flash） | [2026-10-15](../notes/2026-10-15.md) |
 | `labs/ch07-tool-registration/`（U17 扩展） | 第 7 章后半 | 4 内置工具实测：TodoWrite/DevLog 真实调用并落盘（3 步清单+decision 日志）；Skill=渐进式披露、Task=子代理隔离（源码确认） | 已跑通（16.97 s） | [2026-10-13](../notes/2026-10-13.md) |
 | `labs/ch07-tool-registration/`（U16 扩展） | 第 7 章后半 | 工具调用链：hours_until→calculate 强依赖（trace 自动校验 3 项全过）；发现 SimpleAgent 收尾失败 vs ReActAgent 一次答对（选框架=选行为） | 已跑通（ReAct 2/2；SimpleAgent 4/4 失败留对照） | [2026-10-12](../notes/2026-10-12.md) |

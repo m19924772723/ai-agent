@@ -33,6 +33,7 @@ results/
 
 | 日期 | 成果 | 一句话 | 链接 | 服务对象 |
 |---|---|---|---|---|
+| 2026-10-16 | CAMEL 双角色协作 demo | 电子书协作跑通（7 轮/84.6 s/产出含实证引用）；三框架对比表收官——AgentScope(强规则)/AutoGen(流水线)/CAMEL(动态分解) | [camel-demo](2026-10-16/camel-demo/) | 多智能体框架选型 + 面试素材 |
 | 2026-10-15 | AutoGen 团队 demo | 四角色软件开发团队跑通（8 消息/46.7 s/依赖 59 MB），生成代码验证 5.0 ✓；踩 402 静默/TERMINATE 文本/UserProxy 无头三坑 | [autogen-demo](2026-10-15/autogen-demo/) | 三框架对比表第 2 行 + 多智能体面试素材 |
 | 2026-10-14 | AgentScope 三国狼人杀 demo | DashScope→OpenAI 兼容适配跑通（4 人 1 轮：10 调用 / 10129+1797 token / LLM 46.6 s；查验+投票判定全对）；MsgHub/fanout/结构化输出机制验证 | [agentscope-demo](2026-10-14/agentscope-demo/) | 阶段2 框架对比表第 1 行 + 「多智能体框架」面试 |
 | 2026-10-13 | 框架内置工具实测 | 4 内置工具源码定位+实测：TodoWrite 落盘 3 步清单、DevLog 落盘 decision 日志；Skill=渐进式披露、Task=子代理隔离 | [框架内置工具实测](2026-10-13/框架内置工具实测/) | 阶段3 记忆前置 + 「Agent 记忆/多任务管理」面试 |

@@ -121,6 +121,8 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-16 | C 组 | 多智能体框架 CAMEL：双角色 RolePlaying 电子书 demo 适配 OpenAI 兼容端点跑通（7 轮/84.6 s/依赖 90 MB/产出含实证引用）；三框架对比表收官 | `labs/ch06-camel/`、`results/2026-10-16/camel-demo/` |
+| 2026-10-16 | C 组 | 框架生态公共坑：mcp 2.x 改名（FastMCP 导入失败）在 AgentScope(U18)/CAMEL(U20) 两次踩到 → 钉 `mcp>=1.13,<2` | `labs/ch06-camel/README` 位置见 notes/2026-10-16.md |
 | 2026-10-15 | C 组 | 多智能体框架 AutoGen：软件开发团队 demo 适配 OpenAI 兼容端点跑通（4 角色/8 消息/46.7 s/依赖 59 MB），生成代码执行验证正确；三框架对比表第 2 行 | `labs/ch06-autogen/`、`results/2026-10-15/autogen-demo/` |
 | 2026-10-13 | C 组 | 框架内置工具实测：Skill（渐进式披露/按需加载）/Task（子代理隔离）/TodoWrite（声明式覆盖/单线程）/DevLog（结构化日志）源码定位；TodoWrite+DevLog 真实调用并落盘（memory/todos/、memory/devlogs/） | `labs/ch07-tool-registration/builtin_tools_probe.py`、`README_U17.md` |
 | 2026-10-12 | C 组 | 工具调用链：hours_until→calculate 强依赖任务，trace 提取 + 自动校验（参数含前步结果/顺序/答案 3 项全过） | `labs/ch07-tool-registration/chained_tools_react.py`、`out/chained_react_run.json` |
