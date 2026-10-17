@@ -121,6 +121,7 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-17 | — | 阶段2 收口：U9~U20 十二个单元全 ✅，2 周复盘归档（评测/观测/A-B/框架四线沉淀）；三框架对比表收官 | `results/2026-10-17/阶段2复盘/`、`notes/2026-10-17.md` |
 | 2026-10-16 | C 组 | 多智能体框架 CAMEL：双角色 RolePlaying 电子书 demo 适配 OpenAI 兼容端点跑通（7 轮/84.6 s/依赖 90 MB/产出含实证引用）；三框架对比表收官 | `labs/ch06-camel/`、`results/2026-10-16/camel-demo/` |
 | 2026-10-16 | C 组 | 框架生态公共坑：mcp 2.x 改名（FastMCP 导入失败）在 AgentScope(U18)/CAMEL(U20) 两次踩到 → 钉 `mcp>=1.13,<2` | `labs/ch06-camel/README` 位置见 notes/2026-10-16.md |
 | 2026-10-15 | C 组 | 多智能体框架 AutoGen：软件开发团队 demo 适配 OpenAI 兼容端点跑通（4 角色/8 消息/46.7 s/依赖 59 MB），生成代码执行验证正确；三框架对比表第 2 行 | `labs/ch06-autogen/`、`results/2026-10-15/autogen-demo/` |

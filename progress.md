@@ -15,7 +15,7 @@
 | 3 大语言模型基础 | BPE / 词向量 / Transformer / 采样 | 调参困惑时回查 | 在读（3.2.1 采样参数已实测） | [2026-10-01](../notes/2026-10-01.md) |
 | **4 经典范式构建** | ReAct / Reflection / Plan-and-Solve | **阶段4 前** | 在读（4.1 客户端 + 4.2/4.3/4.4 三范式实测） | [09-29](../notes/2026-09-29.md)、[10-02](../notes/2026-10-02.md)、[10-03](../notes/2026-10-03.md) |
 | 5 低代码平台搭建 | Coze / Dify / FastGPT / n8n | 要快速出原型时 | 未开始 | — |
-| 6 框架开发实践 | AgentScope / AutoGen / CAMEL / LangGraph | 选型时对照读 | 已读 6.2/6.3 节 + AgentScope 狼人杀 demo（U18）+ AutoGen 团队 demo（U19）+ CAMEL 电子书 demo（U20）均跑通；三框架对比表收官 | [10-14](../notes/2026-10-14.md)、[10-16](../notes/2026-10-16.md) |
+| 6 框架开发实践 | AgentScope / AutoGen / CAMEL / LangGraph | 选型时对照读 | 已读 + 代码已跑通（AgentScope 狼人杀 U18 / AutoGen 团队 U19 / CAMEL 电子书 U20，三框架对比表收官）（U19）+ CAMEL 电子书 demo（U20）均跑通；三框架对比表收官 | [10-14](../notes/2026-10-14.md)、[10-16](../notes/2026-10-16.md) |
 | **7 构建你的 Agent 框架** | 自己实现 Agent 循环 / 工具 / 记忆 | **阶段4 前** | 已读 + 代码已跑通（探针 + 自写 Agent Loop + 测试） | [10-04](../notes/2026-10-04.md)、[10-05](../notes/2026-10-05.md) |
 | **8 记忆与检索** | Memory 分层 / RAG 管线 / MarkItDown | **阶段3 精读** | 未开始 | — |
 | **9 上下文工程** | 上下文装配 / 笔记工具 / 终端工具 | **阶段4** | 未开始 | — |
