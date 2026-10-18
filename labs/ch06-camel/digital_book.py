@@ -21,9 +21,60 @@ from datetime import datetime
 
 from camel.agents import ChatAgent
 from camel.configs import ChatGPTConfig
-from camel.models import ModelFactory
+from camel.models import BaseModelBackend, ModelFactory
 from camel.societies import RolePlaying
 from camel.types import ModelPlatformType
+
+
+class StatsModel(BaseModelBackend):
+    """统计包装器（U18 同款）：继承 BaseModelBackend（框架要求 isinstance 检查），
+    实现抽象方法 _run/_arun 转发 inner，在 run() 后累计 token usage。"""
+
+    def __init__(self, inner):
+        # 先跑基类：此时 __setattr__ 里 inner 尚未存在 → 直接设自身（不转发）
+        super().__init__(model_type=inner.model_type, model_config_dict=inner.model_config_dict)
+        object.__setattr__(self, "inner", inner)
+        object.__setattr__(self, "calls", 0)
+        object.__setattr__(self, "prompt_tokens", 0)
+        object.__setattr__(self, "completion_tokens", 0)
+
+    def _run(self, *args, **kwargs):
+        return self.inner.run(*args, **kwargs)
+
+    def _arun(self, *args, **kwargs):
+        return self.inner.arun(*args, **kwargs)
+
+    def run(self, messages, response_format=None, tools=None):
+        resp = self.inner.run(messages, response_format=response_format, tools=tools)
+        self.calls += 1
+        try:
+            usage = getattr(resp, "usage", None)
+            if usage is not None:
+                self.prompt_tokens += getattr(usage, "prompt_tokens", 0) or 0
+                self.completion_tokens += getattr(usage, "completion_tokens", 0) or 0
+        except Exception:
+            pass
+        return resp
+
+    @property
+    def token_counter(self):
+        return self.inner.token_counter
+
+    def __getattr__(self, name):
+        # 注意：必须用 object.__getattribute__ 取 inner，直接 self.inner 会再次触发 __getattr__ 递归
+        return getattr(object.__getattribute__(self, "inner"), name)
+
+    def __setattr__(self, name, value):
+        if name in ("inner", "calls", "prompt_tokens", "completion_tokens"):
+            object.__setattr__(self, name, value)
+        else:
+            try:
+                inner = object.__getattribute__(self, "inner")
+            except AttributeError:
+                # 基类 __init__ 阶段（inner 未就位）→ 直接设自身
+                object.__setattr__(self, name, value)
+            else:
+                setattr(inner, name, value)
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -49,13 +100,14 @@ def main():
         raise SystemExit("缺少密钥：LLM_API_KEY / HERMES_CUSTOM_DEEPSEEK_API_KEY")
 
     # CAMEL 0.2.75：自定义 OpenAI 兼容端点用 OPENAI_COMPATIBLE 平台（官方文档做法）
-    model = ModelFactory.create(
+    inner = ModelFactory.create(
         model_platform=ModelPlatformType.OPENAI_COMPATIBLE_MODEL,
         model_type=LLM_MODEL,
         url=LLM_BASE_URL,
         api_key=LLM_API_KEY,
         model_config_dict=ChatGPTConfig(temperature=0.2, max_tokens=2048).as_dict(),
     )
+    model = StatsModel(inner)  # 统计包装（U18 同款）
 
     print("=" * 70)
     print(f"CAMEL｜模型 {LLM_MODEL}｜端点 {LLM_BASE_URL}")
@@ -97,6 +149,7 @@ def main():
 
     wall = round(time.perf_counter() - t0, 1)
     print(f"\n总共进行了 {n} 轮协作对话｜墙钟 {wall} s｜完成标志：{done}")
+    print(f"LLM 调用 {model.calls} 次｜prompt {model.prompt_tokens} + completion {model.completion_tokens} = {model.prompt_tokens + model.completion_tokens} tokens")
 
     record = {
         "ts": datetime.now().isoformat(timespec="seconds"),
@@ -108,6 +161,9 @@ def main():
         "turns": n,
         "wall_seconds": wall,
         "task_done": done,
+        "llm_calls": model.calls,
+        "tokens": {"prompt": model.prompt_tokens, "completion": model.completion_tokens,
+                   "total": model.prompt_tokens + model.completion_tokens},
         "transcript": transcript,
     }
     out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out", "camel_run.json")

@@ -121,6 +121,7 @@
 
 | 日期 | 组 | 验收动作 | 证据 |
 |---|---|---|---|
+| 2026-10-18 | C 组 | 框架 usage 采集配方：StatsModel 包装器（继承 BaseModelBackend + 补抽象方法 + 先基类后字段），CAMEL 实测 16722 tokens/11 调用；三框架成本列收官 | `labs/ch06-camel/digital_book.py`、`results/2026-10-18/camel-token采集/` |
 | 2026-10-17 | — | 阶段2 收口：U9~U20 十二个单元全 ✅，2 周复盘归档（评测/观测/A-B/框架四线沉淀）；三框架对比表收官 | `results/2026-10-17/阶段2复盘/`、`notes/2026-10-17.md` |
 | 2026-10-16 | C 组 | 多智能体框架 CAMEL：双角色 RolePlaying 电子书 demo 适配 OpenAI 兼容端点跑通（7 轮/84.6 s/依赖 90 MB/产出含实证引用）；三框架对比表收官 | `labs/ch06-camel/`、`results/2026-10-16/camel-demo/` |
 | 2026-10-16 | C 组 | 框架生态公共坑：mcp 2.x 改名（FastMCP 导入失败）在 AgentScope(U18)/CAMEL(U20) 两次踩到 → 钉 `mcp>=1.13,<2` | `labs/ch06-camel/README` 位置见 notes/2026-10-16.md |
